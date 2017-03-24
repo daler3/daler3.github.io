@@ -31,6 +31,7 @@
 			  display: inline;
 			  font-size: 20px;
 			  width: 100%;
+			  z-index: -1;
 			  line-height: 1;
 			  color: rgba(0, 0, 0, 0.8);
 			  content: "\25BC";
@@ -197,10 +198,6 @@
 								.attr("width", w)
 								.attr("height", h);
 
-					var div = d3.select("p").append("div")   
-								.attr("class", "tooltip")  
-								.style("opacity", 0);
-
 					//Create circles
 					var me = svg.selectAll("circle")
 					   .data(dataset03)
@@ -219,7 +216,7 @@
 						.attr("stroke", "orange")
 						.attr("stroke-width", "3px")	
 						.attr("opacity", ".7")		
-						.on("mouseover", function(d, i) { 
+						.on("mouseover", function(d, i) {
 							var sum = d[0] + d[1];
 							console.log(d[0], d[1], sum)
 							div	.transition()        
@@ -239,6 +236,10 @@
 							d3.select(this)
 								.attr("stroke-width", "3px")
 							});
+
+					var div = d3.select("p").append("div")   
+								.attr("class", "tooltip")  
+								.style("opacity", 0);
 
 
 					//Define clipping path
