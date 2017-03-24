@@ -225,6 +225,8 @@
 							div	.transition()        
 								.duration(10)      
 								.style("opacity", .9);
+							d3.select(this)
+								.attr("stroke-width", "5px");
 							div	.html("Amount of crime in " + districts[i] + ": " + sum 
 										+ "<br><br>Prostitution: " + d[0] +
 										"<br>Vehicle Theft: " + d[1]
@@ -234,6 +236,8 @@
 							div	.transition()        
 								.duration(200)      
 								.style("opacity", 0);
+							d3.select(this)
+								.attr("stroke-width", "3px")
 							});
 
 
