@@ -37,22 +37,78 @@
 			  content: "\25BC";
 			  position: absolute;
 			  text-align: center;         
-			}	
+			}
+
+			.myButton {
+				-moz-box-shadow: 0px 1px 0px 0px #fff6af;
+				-webkit-box-shadow: 0px 1px 0px 0px #fff6af;
+				box-shadow: 0px 1px 0px 0px #fff6af;
+				background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+				background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+				background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+				background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+				background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+				background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+				background-color:#ffec64;
+				-moz-border-radius:6px;
+				-webkit-border-radius:6px;
+				border-radius:6px;
+				border:1px solid #ffaa22;
+				display:inline-block;
+				cursor:pointer;
+				color:#333333;
+				font-family:Arial;
+				font-size:15px;
+				font-weight:bold;
+				padding:6px 24px;
+				text-decoration:none;
+				text-shadow:0px 1px 0px #ffee66;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 550px;
+				margin-left: 550px;
+				margin-top: 5px;
+			}
+			.myButton:hover {
+				background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+				background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+				background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+				background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+				background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+				background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+				background-color:#ffab23;
+			}
+			.myButton:active {
+				position:relative;
+				top:1px;
+			}
+
+
 		</style>
 	</head>
 	<body>
 		<h2>Visualization 1: Scatterplot</h2>
+		<h4 class="Description" id="SelectionYear" margin-left= "100px">
+			You are now visualizing: 2003 Data
+		</h4>
+
 		<div id="add2015">
-			<input name="2015btn"
+			<input class="myButton"
+				   name="2015btn"
 				   type="button"
 				   value="2015 Data"></input>
 		</div>
 		<div id="add2003">
-			<input name="2003btn"
+			<input class="myButton"
+				   name="2003btn"
 				   type="button"
 				   value="2003 Data"></input>
 		</div>
-		<p class="Aligner">
+
+		<p id="firstvis" class="Aligner">
 			<style type="text/css">	
 				.Aligner {
 				  display: flex;
@@ -69,6 +125,20 @@
 
 
 			<script type="text/javascript">
+				function functionChange(){
+					d3.selectAll("myButton")
+					  .on("click", function(){
+					  		var bttnID = d3.select(this).attr("id");
+							var des = document.getElementById("SelectionYear")
+							if(bttnID == "add2003"){
+								SelectionYear.innerHTML = "2003 Data"
+							}
+							if(bttnID == "add2015"){
+								SelectionYear.innerHTML = "2015 Data"
+							}
+
+					  })
+				}
 
 				//Width and height
 				var w = 950;
@@ -105,7 +175,7 @@
 						if(error){
 							console.log(error)
 						} else {
-							console.log(data)
+							
 							data.map(function(d){
 							//push district just if it is the first time this function is called
 							if (flag == false){
@@ -114,13 +184,9 @@
 							counts_p.push(+d.Count);
 							})
 						}
-						console.log(districts);
-						console.log(counts_p);
 
 						//second function for elaborating the csv file 
 						secondcsv(p_path, v_path, counts_p, counts_v, dset, flag);
-
-						console.log(dset);
 					});
 				}
 				
@@ -131,13 +197,11 @@
 						if(error){
 							console.log(error)
 						} else {
-							console.log(data)
 							data.map(function(d){
 								counts_v.push(+d.Count);
 							})
 						}
 						elaborate_datarows(counts_p, counts_v, dset);
-						console.log(dset);
 						if(flag == true){
 							do_svg_stuff();
 						}
@@ -157,8 +221,6 @@
 
 		    	//function inside which the actual svg is elaborated 
 		    	function do_svg_stuff(){
-		    		console.log(dataset03)
-		    		console.log(dataset15)
 			    	//Create scale functions
 					var xScale = d3.scale.linear()
 										 .domain([0, d3.max([
@@ -193,7 +255,7 @@
 									  .ticks(10);
 
 					//Create SVG element
-					var svg = d3.select("p")
+					var svg = d3.select("#firstvis")
 								.append("svg")
 								.attr("width", w)
 								.attr("height", h);
@@ -215,14 +277,14 @@
 					  	.attr("fill", "yellow")
 						.attr("stroke", "orange")
 						.attr("stroke-width", "3px")	
-						.attr("opacity", ".7")		
+						.attr("opacity", ".7")
 						.on("mouseover", function(d, i) {
 							var sum = d[0] + d[1];
-							console.log(d[0], d[1], sum)
+							//console.log(d[0], d[1], sum)
 							div	.transition()        
 								.duration(10)      
 								.style("opacity", .9);
-							d3.select(this)
+							d3  .select(this)
 								.attr("stroke-width", "5px");
 							div	.html("Amount of crime in " + districts[i] + ": " + sum 
 										+ "<br><br>Prostitution: " + d[0] +
@@ -233,17 +295,17 @@
 							div	.transition()        
 								.duration(200)      
 								.style("opacity", 0);
-							d3.select(this)
+							d3 	.select(this)
 								.attr("stroke-width", "3px")
 							});
 
-					var div = d3.select("p").append("div")   
+					var div = d3.select("#firstvis").append("div")   
 								.attr("class", "tooltip")  
 								.style("opacity", 0);
 
 
 					//Define clipping path
-					svg.append("clipPath")                  //Make a new clipPath
+					svg .append("clipPath")                  //Make a new clipPath
 						.attr("id", "chart-area")           //Assign an ID
 						.append("rect")                     //Within the clipPath, create a new rect
 						.attr("x", padding)                 //Set rect's position and size…
@@ -260,11 +322,21 @@
 						.text(function(d, i) {
 							return districts[i];
 						})
-						.attr("x", function(d) {
-							return xScale(d[0]);
+						.attr("x", function(d, i) {
+							if(districts[i] == "RICHMOND" || districts[i] == "TARAVAL"){
+								return xScale(d[0])-5;
+							}
+							else {
+								return xScale(d[0]);
+							}
 						})
-						.attr("y", function(d) {
-							return yScale(d[1]);
+						.attr("y", function(d, i) {
+							if(districts[i] == "RICHMOND" || districts[i] == "TARAVAL"){
+								return yScale(d[1])+10;
+							}
+							else {
+								return yScale(d[1]);
+							}
 						})
 						.attr("font-family", "verdana")
 						.attr("font-size", "8px")
@@ -288,24 +360,6 @@
 								.attr("opacity", "0.9")
 						});
 
-					// //Create labels
-					// svg.selectAll("text")
-					//    .data(dataset03)
-					//    .enter()
-					//    .append("text")
-					//    .text(function(d) {
-					//    		return d[0] + "," + d[1];
-					//    })
-					//    .attr("x", function(d) {
-					//    		return xScale(d[0]);
-					//    })
-					//    .attr("y", function(d) {
-					//    		return yScale(d[1]);
-					//    })
-					//    .attr("font-family", "sans-serif")
-					//    .attr("font-size", "11px")
-					//    .attr("fill", "red");
-					
 					//Create X axis
 					svg.append("g")
 						.attr("class", "axis")
@@ -330,9 +384,7 @@
 						.text("Total #VEHICLE THEFT");
 
 					d3.select("#add2015")
-						.on("click", function(d) {
-							console.log("15 clicked")						
-
+						.on("click", function(d) {					
 							me = svg.selectAll("circle")
 								.data(dataset15)
 								.transition()
@@ -367,60 +419,83 @@
 								.text(function(d,i) {
 									return districts[i];
 								})
-								.attr("x", function(d) {
-									return xScale(d[0]);
+								.attr("x", function(d, i) {
+									if(districts[i] == "RICHMOND" || districts[i] == "TARAVAL"){
+										return xScale(d[0])-5;
+									}
+									else {
+										return xScale(d[0]);
+									}
 								})
-								.attr("y", function(d) {
-									return yScale(d[1]);
+								.attr("y", function(d, i) {
+									if(districts[i] == "RICHMOND" || districts[i] == "TARAVAL"){
+										return yScale(d[1])+10;
+									}
+									else{
+										return yScale(d[1]);
+									}
 								});
-					})
+							document.getElementById("SelectionYear").innerHTML = "You are now visualizing: 2015 data";
+						})
 			
 					d3.select("#add2003")
-						.on("click", function(d) {
-							console.log("03 clicked")
-
-							me = svg.selectAll("circle")
-								.data(dataset03)
-								.transition()
-								.ease("linear")
-								.duration(1000)
-								.each("start", function() {      // <-- Executes at start of transition
-									d3.select(this)
-										.attr("fill", "orange")
-										.attr("r", 7)
-								})
-								.attr("cx", function(d) {
-									return xScale(d[0]);
-								})
-								.attr("cy", function(d) {
-									return yScale(d[1]);
-								})
-								.transition()    // <-- Transition #2
-								.duration(1000)
-								.attr("r", function(d) {
-									return rScale(d[0]+d[1]);
-								})
-								.attr("fill", "yellow")
-								.attr("stroke", "orange")
-								.attr("stroke-width", "3px")	
-								.attr("opacity", ".7");
+							.on("click", function(d) {
+								me = svg.selectAll("circle")
+									.data(dataset03)
+									.transition()
+									.ease("linear")
+									.duration(1000)
+									.each("start", function() {      // <-- Executes at start of transition
+										d3.select(this)
+											.attr("fill", "orange")
+											.attr("r", 7)
+									})
+									.attr("cx", function(d) {
+										return xScale(d[0]);
+									})
+									.attr("cy", function(d) {
+										return yScale(d[1]);
+									})
+									.transition()    // <-- Transition #2
+									.duration(1000)
+									.attr("r", function(d) {
+										return rScale(d[0]+d[1]);
+									})
+									.attr("fill", "yellow")
+									.attr("stroke", "orange")
+									.attr("stroke-width", "3px")	
+									.attr("opacity", ".7");
+									
+								svg.selectAll("text")  // <-- Note "text", not "circle" or "rect"
+									.data(dataset03)
+									.transition()
+									.ease("linear")
+									.duration(1000)
+									.text(function(d,i) {
+										return districts[i];
+									})
+									.attr("x", function(d, i) {
+										if(districts[i] == "RICHMOND" || districts[i] == "TARAVAL"){
+											return xScale(d[0])-5;
+										}
+										else {
+											return xScale(d[0]);
+										}
+									})
+									.attr("y", function(d, i) {
+										if(districts[i] == "RICHMOND" || districts[i] == "TARAVAL"){
+											return yScale(d[1])+10;
+										}
+										else {
+											return yScale(d[1]);
+										}
+									});
 								
-							svg.selectAll("text")  // <-- Note "text", not "circle" or "rect"
-								.data(dataset03)
-								.transition()
-								.ease("linear")
-								.duration(1000)
-								.text(function(d,i) {
-									return districts[i];
-								})
-								.attr("x", function(d) {
-									return xScale(d[0]);
-								})
-								.attr("y", function(d) {
-									return yScale(d[1]);
-								});
+								document.getElementById("SelectionYear").innerHTML = "You are now visualizing: 2003 data";
 						})
 			};
+
+
 			</script>
 		</p>
 	</body>
