@@ -1,0 +1,487 @@
+<div class="modal fade" id="modal-tree2" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg" style="width:100%">
+					<div class="modal-body">
+						<h1>Top 10 tree species </h1>
+						<hr class="star-primary">
+						<p>Click a tree icon to view details about each of the 10 most common trees in NYC. </p>
+						<html lang="en">
+						<head>
+							<meta charset="utf-8">
+							<title>Street trees</title>							
+							<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+							<style type="text/css">
+								div.myButton input {
+									cursor:pointer;
+									width:100px;
+									height:100px;
+									float:left;
+									border: none;
+									margin:10px;
+								}
+								.myButton:hover #title1{
+									display: block;
+								}
+								.myButton:hover #title2{
+									display: block;
+								}
+								.myButton:hover #title3{
+									display: block;
+								}
+								.myButton:hover #title4{
+									display: block;
+								}
+								.myButton:hover #title5{
+									display: block;
+								}
+								.myButton:hover #title6{
+									display: block;
+								}
+								.myButton:hover #title7{
+									display: block;
+								}
+								.myButton:hover #title8{
+									display: block;
+								}
+								.myButton:hover #title9{
+									display: block;
+								}
+								.myButton:hover #title10{
+									display: block;
+								}
+								#title1, #title2, #title3, #title4, #title5, #title6, #title7, #title8, #title9, #title10 { 
+									display: none;
+									position: absolute;
+									z-index: 1;
+									color: white;
+									text-align: center;
+									vertical-align: center;
+								}
+								
+								#title1{
+									width: 100px;
+									top: 50px;
+								}
+								#title2{
+									width: 350px;
+									top: 50px;
+								}
+								#title3{
+									width: 600px;
+									top: 50px;
+								}
+								#title4{
+									width: 800px;
+									top: 50px;
+								}#title5{
+									width: 1100px;
+									top: 50px;
+								}
+								
+								#title6{
+									width: 100px;
+									top: 150px;
+								}
+								#title7{
+									width: 350px;
+									top: 150px;
+								}
+								#title8{
+									width: 600px;
+									top: 150px;
+								}
+								#title9{
+									width: 800px;
+									top: 150px;
+								}#title10{
+									width: 1100px;
+									top: 150px;
+								}
+								.parent {
+									width:600px;
+									height:300px;
+									position: relative;
+								}
+								.demo{
+									float:left;
+								}
+
+								div.tooltip {
+									box-sizing: border-box;
+									display: inline;
+									font-size: 20px;
+									width: 100%;
+									z-index: 10000;
+									line-height: 1;
+									color: rgba(0, 0, 0, 0.8);
+									content: "\25BC";
+									position: absolute;
+									text-align: center;
+								}
+								
+								#tooltip {
+									position: absolute;
+									width: 200px;
+									height: auto;
+									padding: 10px;
+									background-color: white;
+									-webkit-border-radius: 10px;
+									-moz-border-radius: 10px;
+									border-radius: 10px;
+									-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+									-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+									box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+									pointer-events: none;
+								}
+							</style>
+						</head>
+
+						<div id="tree_outer_div">
+							<div id="trees_div" style="margin-top: 60px">
+								<div class="parent" id="tree_parent" style="height:230px;width:600px;margin-bottom:10px;margin-left:250px;">
+									<div id="london_planetree" onclick="londonPlanetree()" onmouseover="onImageHover('London Planetree')" class="myButton"><INPUT style="background: url(img/modals/Londonplanetree_resized.jpg) no-repeat">
+										<!--<span id="title1">London Planetree</span> -->
+									</div>
+									<div id="honeylocust" onclick="honeyLocust()" onmouseover="onImageHover('Honeylocust')" class="myButton"><INPUT style="background: url(img/modals/Honeylocust_resized.jpg) no-repeat">
+										<!--<span id="title2">Honeylocust</span> -->
+									</div>
+									<div id="callery_pear" onclick="calleryPear()" onmouseover="onImageHover('Callery pear')" class="myButton"><INPUT style="background: url(img/modals/Callerypear_resized.jpg) no-repeat">
+										<!--<span id="title3">Callery Pear</span> -->
+									</div>
+									<div id="pin_oak" onclick="pinOak()" onmouseover="onImageHover('Pin Oak')" class="myButton"><INPUT  style="background: url(img/modals/Pinoak_resized.jpg) no-repeat">
+										<!--<span id="title4">Pin Oak</span> -->
+									</div>
+									<div id="norway_maple" onclick="norwayMaple()" onmouseover="onImageHover('Norway Maple')" class="myButton"><INPUT  style="background: url(img/modals/Norwaymaple_resized.jpg) no-repeat">
+										<!--<span id="title5">Norway Maple</span> -->
+									</div>
+									<div id="littleleaf_linden" onclick="littleLeafLinden()" onmouseover="onImageHover('Little Leaf Linden')" class="myButton"><INPUT  style="background: url(img/modals/Littleleaflinden_resized.jpg) no-repeat">
+										<!--<span id="title6">Little Leaf Linden</span> -->
+									</div>
+									<div id="cherry" onclick="cherry()" onmouseover="onImageHover('Cherry')" class="myButton"><INPUT  style="background: url(img/modals/Cherry_resized.jpg) no-repeat">
+										<!--<span id="title7">Cherry</span> -->
+									</div>
+									<div id="japanese_zelkova" onclick="japaneseZelkova()" onmouseover="onImageHover('Japanese Zelkova')" class="myButton"><INPUT  style="background: url(img/modals/JapaneseZelkova_resized.jpg) no-repeat">
+										<!--<span id="title8">Japanese Zelkova</span> -->
+									</div>
+									<div id="ginkgo" onclick="ginkgo()" onmouseover="onImageHover('Ginkgo')" class="myButton"><INPUT  style="background: url(img/modals/Ginkgo_resized.jpg) no-repeat">
+										<!--<span id="title9">Ginkgo</span> -->
+									</div>
+									<div id="sophora" onclick="sophora()" onmouseover="onImageHover('Sophora')" class="myButton"><INPUT  style="background: url(img/modals/Sophora_resized.jpg) no-repeat">
+										<!--<span id="title10">Sophora</span> -->
+									</div>									
+								</div>
+
+								<script type="text/javascript">
+								
+									var trees_tool_div = d3.select("#trees_div").append("div")
+										.attr("class", "tooltip")
+										.style("z-index", 10000)
+										.style("opacity", 0);
+
+									function onImageHover(treeType){
+										d3.select("#tree_parent")
+											.on("mouseover", function (d) {
+															trees_tool_div.transition()
+																.duration(10)
+																.style("opacity", 1);
+															d3.select(this)
+																.style("opacity", 1)
+																.attr("stroke-width", "12px");
+															trees_tool_div.html("<b>" + treeType + "</b>")
+																.style("left", (350) + "px")
+																.style("top", (200) + "px");
+														})
+														.on("mouseout", function (d) {
+															trees_tool_div.transition()
+																.duration(200)
+																.style("opacity", 0);
+															d3.select(this)
+																.style("opacity", 1);
+														});
+									}
+
+									function londonPlanetree() {
+										var demo = document.getElementById('demo');
+										if(demo.innerHTML === ''){
+											demo.innerHTML = '<h2>London Planetree</h2>'+
+											'<i>Latin</i>: Platanus x acerifolia <br>'+
+											'<i>Amount in NYC</i>: 87,014 <br>'+
+											'<i>Ranking (most common)</i>: 1st <br>'+
+											'<br><b>Fun facts</b>'+
+											'<br>'+
+											'<br>London planetree is the most common tree in NYC '+
+											'<hr class="star-primary">'+
+											'It is a hybrid tree discovered in London in 17th century'+
+											'<hr class="star-primary">'+
+											'It is only the 6th most common tree in Manhattan'+
+											'<hr class="star-primary">'+
+											'In 1995 it was only the second most common tree in NYC, in spite of having 1,026 more trees'+
+											'<hr class="star-primary">'+
+											'It is believed that the NYC Parks logo is based on the leaf of a London Planetree'+
+											'<hr class="star-primary">'+
+											'According to Wikipedia it is one of the most efficient trees in removing small particulate pollutants in urban areas'+
+											'<br><br><br><b>Cultivation perspective</b><br>'+
+											'It is a suitable tree to plant in urban areas because of its ability to remove small particulate pollutants, fulfilling the NYC Parks goal to <i>"remove air pollutants that can trigger respiratory illnesses". </i>'+
+											'<br><br><br>'+
+											'<font size="1">Fun fact source(s): https://en.wikipedia.org/wiki/Platanus_%C3%97_acerifolia</font>';
+										} else {
+											demo.innerHTML = '';
+										}
+									}
+									
+									function honeyLocust() {
+										var demo = document.getElementById('demo');
+										if (demo.innerHTML === '') {
+											demo.innerHTML = '<h2>Honeylocust</h2>'+
+											'<i>Latin</i>: Gleditsia triacanthos (var. inermis) <br>'+
+											'<i>Amount in NYC</i>: 64,264 <br>'+
+											'<i>Ranking (most common)</i>: 2nd <br>'+
+											'<br><b>Fun facts</b>'+
+											'<br>'+
+												'It originates from North America and is also known as a <i>Thorny locust</i> as a variant of the tree has thorns '+
+												'<hr class="star-primary">'+
+												'The amount of Honey locust trees has almost doubled from 1995 to 2015'+
+												'<hr class="star-primary">'+
+												'It is the most common tree in Bronx and Manhattan'+
+												'<hr class="star-primary">'+
+												'It can survive tough weather and soil conditions and grows fast'+
+											'<br><br><br><b>Cultivation perspective</b><br>'+
+											'Because of its fast growth rate it is able to provide a shaded area rather quickly compared to other species. This fulfills the NYC Parks goal of <i>"keeping the city cooler during the summer".</i> '+
+											'<br><br><br>'+
+											'<font size="1">Fun fact source(s): https://en.wikipedia.org/wiki/Honey_locust</font>';
+										} else {
+											demo.innerHTML = '';
+										}
+									}
+									
+									function calleryPear() {
+										var demo = document.getElementById('demo');
+										if (demo.innerHTML === '') {
+											demo.innerHTML = '<h2>Callery Pear</h2>'+
+											'<i>Latin</i>: Pyrus calleryana <br>'+
+											'<i>Amount in NYC</i>: 58,931 <br>'+
+											'<i>Ranking (most common)</i>: 3rd <br>'+
+											'<br><b>Fun facts</b>'+
+											'<br>'+
+											'It originates from Asia'+
+											'<hr class="star-primary">'+
+											'The amount of Callery pear trees has increased by almost 90% from 1995 to 2015'+
+											'<hr class="star-primary">'+
+											'It is the most common tree in Staten Island'+
+											'<hr class="star-primary">'+
+											'There is a Callery Pear tree known as the "Survivor Tree" because it survived the terror attacks on 9/11. The tree was damaged after the attack, but after some time in recovery at the NYC Parks it was returned to the Memorial in 2010 as a survival mark'+
+											'<br><br><br><b>Cultivation perspective</b><br>'+
+											'It is most likely used for its looks because of the beautiful flowers it produces in the spring.</i> '+
+											'<br><br><br>'+
+											'<font size="1">Fun fact source(s): https://en.wikipedia.org/wiki/Pyrus_calleryana</font>';
+										} else {
+											demo.innerHTML = '';
+										}
+									}
+									
+									function pinOak() {
+										var demo = document.getElementById('demo');
+										if (demo.innerHTML === '') {
+											demo.innerHTML = '<h2>Pin Oak</h2>' + 
+											'<i>Latin</i>: Quercus palustris<br>'+
+											'<i>Amount in NYC</i>: 53,185 <br>'+
+											'<i>Ranking (most common)</i>: 4th <br>'+
+											'<br><b>Fun facts</b>'+
+											'<br>'+
+											'It is a medium-sized, red oak'+
+											'<hr class="star-primary">'+
+											'The amount of Pin Oak trees has significantly increased since 1995'+
+											'<hr class="star-primary">'+
+											'In 1995 Pin Oaks were the 3rd most common tree'+
+											'<hr class="star-primary">'+
+											'Pin Oak trees grow relatively fast and have a good pollution tolerance'+
+											'<br><br><br><b>Cultivation perspective</b><br>'+
+											'It is a good choice for street trees because of its tolerance towards pollutions, as well as the fact that it transplants easily and grow relatively fast.'+
+											'<br><br><br>'+
+											'<font size="1">Fun fact source(s): https://en.wikipedia.org/wiki/Quercus_palustris</font>';
+										} else {
+											demo.innerHTML = '';
+										}
+									}
+									
+									function norwayMaple() {
+										var demo = document.getElementById('demo');
+										if (demo.innerHTML === '') {
+											demo.innerHTML = '<h2>Norway Maple</h2>'+
+											'<i>Latin</i>: Acer platanoides<br>'+
+											'<i>Amount in NYC</i>: 34,189 <br>'+
+											'<i>Ranking (most common)</i>: 5th <br>'+
+											'<br><b>Fun facts</b>'+
+											'<br>'+
+												'It originates from eastern/central Europe and western Asia'+
+												'<hr class="star-primary">'+
+												'Under perfect conditions Norway Maples can live up to 250 years, but they have a shorter life expectency in North America'+
+												'<hr class="star-primary">'+
+												'If their roots do not have enough space they might wrap around themselves and eventually dying from this'+
+												'<hr class="star-primary">'+
+												'Stradivarius are suspected to have been constructed from Norway Maple wood'+
+												'<hr class="star-primary">'+
+												'In 2005 it was the second most common tree in NYC and the most common tree in Queens'+
+												'<hr class="star-primary">'+
+												'In 1995 it was the most common tree in NYC and the most common tree both in Bronx, Staten Island and Queens'+
+												'<hr class="star-primary">'+
+												'Since 1995 the amount of Norway Maples has dropped by 70% - from 109,321 in 1995 to 74,721 in 2005 and then 34,189 in 2015'+
+												'<hr class="star-primary">'+
+												'It is tolerant of urban pollution and poor soils'+
+												'<hr class="star-primary">'+
+												'It was a popular choice of street trees in the 1950s and 1960s after the American elm tree population was significantly decreased due to illness'+
+											'<br><br><br><b>Cultivation perspective</b><br>'+
+											'As the London Planetree it is quite tolerant of urban pollution, but it is also quite invasive, which is why London Planetrees have been preferred. '+
+											'<br><br><br>'+
+											'<font size="1">Fun fact source(s): https://en.wikipedia.org/wiki/Acer_platanoides</font>';
+										} else {
+											demo.innerHTML = '';
+										}
+									}
+									
+									function littleLeafLinden() {
+										var demo = document.getElementById('demo');
+										if (demo.innerHTML === '') {
+											demo.innerHTML = '<h2>Little leaf linden</h2>'+
+											'<i>Latin</i>: Tilia cordata <br>'+
+											'<i>Amount in NYC</i>: 29,742 <br>'+
+											'<i>Ranking (most common)</i>: 6th <br>'+
+											'<br><b>Fun facts</b>'+
+											'<br>'+
+												'It originates from Europe'+
+												'<hr class="star-primary">'+
+												'There has been an increase in the population of 2,790 since 1995, meaning the population is rather constant'+
+												'<hr class="star-primary">'+
+												'Little-leaf Linden trees have been used to create avenues all over the world - e.g. <i>Unter den Linden</i> in Berlin'+
+												'<hr class="star-primary">'+
+												'It is called "Little-leaf" because it substituted the American linden tree that has larger leaves'+
+											'<br><br><br><b>Cultivation perspective</b><br>'+
+											'As the Callery Pear it is a suitable street tree because of its looks and ability to survive urban conditions'+
+											'<br><br><br>'+
+											'<font size="1">Fun fact source(s): https://en.wikipedia.org/wiki/Tilia_cordata</font>';
+										} else {
+											demo.innerHTML = '';
+										}
+									}
+									
+									function cherry() {
+										var demo = document.getElementById('demo');
+										if (demo.innerHTML === '') {
+											demo.innerHTML = '<h2>Cherry</h2>'+
+											'<i>Latin</i>: Prunus <br>'+
+											'<i>Amount in NYC</i>: 29,279 <br>'+
+											'<i>Ranking (most common)</i>: 7th <br>'+
+											'<br><b>Fun facts</b>'+
+											'<br>'+
+												'It is widely used all over the world'+
+												'<hr class="star-primary">'+
+												'The blossoms from the Cherry tree is a national flower of Japan'+
+											'<br><br><br><b>Cultivation perspective</b><br>'+
+											'The Cherry tree has beautiful flowers and can be used as an ornamental tree. Several cherry tree species tolerate tough condidations, all things making it good for street tree purposes. '+
+											'<br><br><br>'+
+											'<font size="1">Fun fact source(s): https://en.wikipedia.org/wiki/Prunus</font>';
+										} else {
+											demo.innerHTML = '';
+										}
+									}
+									
+									function japaneseZelkova() {
+										var demo = document.getElementById('demo');
+										if (demo.innerHTML === '') {
+											demo.innerHTML = '<h2>Japanese Zelkova</h2>'+
+											'<i>Latin</i>: Zelkova serrata <br>'+
+											'<i>Amount in NYC</i>: 29,258 <br>'+
+											'<i>Ranking (most common)</i>: 8th <br>'+
+											'<br><b>Fun facts</b>'+
+											'<br>'+
+											'It originates in Asia'+
+											'<hr class="star-primary">'+
+											'The tree is a symbol of multiple Japanese cities'+
+											'<hr class="star-primary">'+
+											'Japanese Zelkova tree is used to make Taiko drums'+
+											'<hr class="star-primary">'+
+											'There has been a significant increase in the amount of Zelkova trees. In 1995 there were only 5,740 trees, almost half of those being in Queens'+
+											'<hr class="star-primary">'+
+											'It thrives in the sun and provides good shade'+
+											'<br><br><b>Cultivation perspective</b><br>'+
+											'The Japanese Zelkova can be used as an ornamental tree because of its shape and color. It is tolerant to drought, pollution and high pH values.'+
+											'<br><br><br>'+
+											'<font size="1">Fun fact source(s): https://en.wikipedia.org/wiki/Zelkova_serrata</font>';
+										} else {
+											demo.innerHTML = '';
+										}
+									}
+									
+									function ginkgo() {
+										var demo = document.getElementById('demo');
+										if (demo.innerHTML === '') {
+											demo.innerHTML = '<h2>Ginkgo</h2>'+
+											'<i>Latin</i>: Ginkgo biloba <br>'+
+											'<i>Amount in NYC</i>: 21,024 <br>'+
+											'<i>Ranking (most common)</i>: 9th <br>'+
+											'<br><b>Fun facts</b>'+
+											'<br>'+
+												'It originates in China and is used in a variety of traditional medicines, and food sources'+
+												'<hr class="star-primary">'+
+												'Fossils from Ginkgo trees dates back 270 million years'+
+												'<hr class="star-primary">'+
+												'Ginkgo is the official tree of Tokyo'+
+												'<hr class="star-primary">'+
+												'In 1995 there were only 13,758 Ginkgo trees'+
+												'<hr class="star-primary">'+
+												'Ginkgo trees adapt well to urban areas, and tolerate pollution well'+
+											'<br><br><b>Cultivation perspective</b><br>'+
+											'The Ginkgo tree is, as many of the other top 10 street trees tolerant to pollution, making it a suitable street tree. It does not require large spaces to grow, which is desirable in street trees. '+
+											'<br><br><br>'+
+											'<font size="1">Fun fact source(s): https://en.wikipedia.org/wiki/Ginkgo_biloba</font>';
+										} else {
+											demo.innerHTML = '';
+										}
+									}
+									
+									function sophora() {
+										var demo = document.getElementById('demo');
+										if (demo.innerHTML === '') {
+											demo.innerHTML = '<h2>Sophora</h2>'+
+											'<i>Latin</i>: Styphnolobium japonicum <br>'+
+											'<i>Amount in NYC</i>: 19,338 <br>'+
+											'<i>Ranking (most common)</i>: 10th <br>'+
+											'<br><b>Fun facts</b>'+
+											'<br>'+
+												'The name, Sophora, originates from the Arabic word <i>sophera</i> meaning pea-flowered tree, whereas the species itself originates from China'+
+												'<hr class="star-primary">'+
+												'Sophora trees are also known as <i>Japanese Pagoda tree</i>'+
+												'<hr class="star-primary">'+
+												'Sophora is used in traditional Chinese medicine'+
+												'<hr class="star-primary">'+
+												'The amount of Sophora trees has almost doubled from 1995 to 2015, in spite of a small decrease of around 1,000 trees in the period from 1995-2005'+
+											'<br><br><b>Cultivation perspective</b><br>'+
+											'The Sophora is tolerant to the urban environments, though some Sophoras tend to grow low hanging branches, which is not ideal for street trees.'
+											'<br><br><br>'+
+											'<font size="1">Fun fact source(s): https://en.wikipedia.org/wiki/Sophora, https://en.wikipedia.org/wiki/Styphnolobium_japonicum </font>';
+										} else {
+											demo.innerHTML = '';
+										}
+									}
+								</script>
+							</div>
+						</div>
+
+						</html>
+						<p id="demo"></p>
+						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

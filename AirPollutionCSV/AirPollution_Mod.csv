@@ -1,0 +1,189 @@
+Borough,CB,Neighbourhood,NO2,O3,PM25,BC
+Queens,406,Forest Hills,20.0,31.1,8.5,0.9
+Queens,407,Whitestone,19.0,31.9,8.5,0.9
+Brooklyn,301,East Williamsburg,21.7,31.0,10.6,1.3
+Brooklyn,306,Park Slope-Gowanus,21.4,30.0,9.9,1.1
+Manhattan,107,Lincoln Square,23.9,28.1,9.8,1.3
+Manhattan,104,Clinton,27.3,27.1,10.9,1.5
+Staten Island,502,Grasmere-Arrochar-Ft. Wadsworth,13.6,32.5,7.8,0.7
+Brooklyn,313,Gravesend,16.1,35.8,7.6,0.6
+Queens,401,Steinway,20.6,31.8,9.0,1.0
+Staten Island,503,Great Kills,11.8,34.1,7.3,0.6
+Brooklyn,302,Clinton Hill,22.4,29.4,9.8,1.1
+Brooklyn,316,Brownsville,20.1,32.1,8.9,0.9
+Brooklyn,311,Bensonhurst East,19.1,33.4,8.0,0.7
+Brooklyn,314,Flatbush,19.3,32.3,8.4,0.8
+Queens,404,Corona,21.9,31.2,8.7,0.9
+Brooklyn,302,Fort Greene,22.4,29.4,9.8,1.1
+Manhattan,108,Upper East Side-Carnegie Hill,25.8,28.0,10.2,1.4
+Queens,409,Kew Gardens,19.5,31.8,8.3,0.8
+Brooklyn,312,Ocean Parkway South,19.9,32.0,8.5,0.8
+Manhattan,103,Chinatown,24.3,28.0,9.9,1.4
+Queens,405,Ridgewood,19.4,32.1,8.9,0.9
+Bronx,206,East Tremont,21.4,29.8,9.4,1.1
+Staten Island,502,Old Town-Dongan Hills-South Beach,13.6,32.5,7.8,0.7
+Staten Island,503,Oakwood-Oakwood Beach,11.8,34.1,7.3,0.6
+Staten Island,502,New Dorp-Midland Beach,13.6,32.5,7.8,0.7
+Manhattan,107,Upper West Side,23.9,28.1,9.8,1.3
+Manhattan,106,Stuyvesant Town-Cooper Village,29.3,25.8,11.2,1.5
+Brooklyn,315,Madison,17.4,34.8,7.8,0.7
+Queens,407,Queensboro Hill,19.0,31.9,8.5,0.9
+Staten Island,503,Annadale-Huguenot-Prince's Bay-Eltingville,11.8,34.1,7.3,0.6
+Bronx,206,Belmont,21.4,29.8,9.4,1.1
+Bronx,205,Mount Hope,22.7,29.1,9.8,1.3
+Staten Island,503,Arden Heights,11.8,34.1,7.3,0.6
+Manhattan,105,Murray Hill-Kips Bay,32.9,24.3,12.3,1.7
+Manhattan,102,West Village,26.3,27.2,10.6,1.6
+Brooklyn,306,Carroll Gardens-Columbia Street-Red Hook,21.4,30.0,9.9,1.1
+Manhattan,109,Morningside Heights,22.9,28.8,9.4,1.1
+Queens,403,Jackson Heights,21.0,31.5,8.3,0.9
+Bronx,207,Norwood,20.9,29.2,9.3,1.1
+Bronx,205,University Heights-Morris Heights,22.7,29.1,9.8,1.3
+Brooklyn,310,Bay Ridge,19.2,31.8,8.4,0.8
+Brooklyn,314,Midwood,19.3,32.3,8.4,0.8
+Queens,407,Murray Hill,19.0,31.9,8.5,0.9
+Brooklyn,317,Rugby-Remsen Village,19.8,32.4,8.7,0.8
+Queens,414,Far Rockaway-Bayswater,13.4,37.5,7.2,0.5
+Brooklyn,304,Bushwick North,20.3,31.7,9.0,0.9
+Queens,414,Hammels-Arverne-Edgemere,13.4,37.5,7.2,0.5
+Bronx,206,Fordham South,21.4,29.8,9.4,1.1
+Queens,413,Springfield Gardens South-Brookville,17.2,32.6,7.9,0.7
+Queens,406,Rego Park,20.0,31.1,8.5,0.9
+Queens,413,Queens Village,17.2,32.6,7.9,0.7
+Brooklyn,308,Prospect Heights,21.3,30.7,8.9,0.9
+Queens,407,Flushing,19.0,31.9,8.5,0.9
+Brooklyn,311,Bensonhurst West,19.1,33.4,8.0,0.7
+Brooklyn,317,Erasmus,19.8,32.4,8.7,0.8
+Bronx,212,Woodlawn-Wakefield,19.0,29.8,9.1,1.0
+Queens,403,East Elmhurst,21.0,31.5,8.3,0.9
+Manhattan,108,Lenox Hill-Roosevelt Island,25.8,28.0,10.2,1.4
+Queens,401,Astoria,20.6,31.8,9.0,1.0
+Manhattan,106,Gramercy,29.3,25.8,11.2,1.5
+Queens,409,Woodhaven,19.5,31.8,8.3,0.8
+Queens,414,Breezy Point-Belle Harbor-Rockaway Park-Broad Channel,13.4,37.5,7.2,0.5
+Brooklyn,312,Kensington-Ocean Parkway,19.9,32.0,8.5,0.8
+Queens,408,Fresh Meadows-Utopia,18.3,31.3,8.2,0.8
+Queens,411,Auburndale,17.6,31.4,8.2,0.8
+Brooklyn,301,Greenpoint,21.7,31.0,10.6,1.3
+Staten Island,502,New Springville-Bloomfield-Travis,13.6,32.5,7.8,0.7
+Brooklyn,315,Sheepshead Bay-Gerritsen Beach-Manhattan Beach,17.4,34.8,7.8,0.7
+Bronx,208,Van Cortlandt Village,17.8,28.8,9.2,1.0
+Brooklyn,318,Flatlands,16.6,34.7,8.1,0.7
+Brooklyn,315,Homecrest,17.4,34.8,7.8,0.7
+Manhattan,105,Midtown-Midtown South,32.9,24.3,12.3,1.7
+Queens,405,Glendale,19.4,32.1,8.9,0.9
+Manhattan,101,Battery Park City-Lower Manhattan,26.7,27.1,10.6,1.2
+Manhattan,110,Central Harlem South,23.3,29.1,9.3,1.2
+Queens,402,Hunters Point-Sunnyside-West Maspeth,21.2,31.6,10.3,1.3
+Brooklyn,312,Borough Park,19.9,32.0,8.5,0.8
+Queens,412,St. Albans,18.5,32.2,8.2,0.8
+Queens,413,Laurelton,17.2,32.6,7.9,0.7
+Queens,411,Bayside-Bayside Hills,17.6,31.4,8.2,0.8
+Queens,408,Jamaica Estates-Holliswood,18.3,31.3,8.2,0.8
+Staten Island,502,Todt Hill-Emerson Hill-Heartland Village-Lighthouse Hill,13.6,32.5,7.8,0.7
+Bronx,206,Claremont-Bathgate,21.4,29.8,9.4,1.1
+Manhattan,106,Turtle Bay-East Midtown,29.3,25.8,11.2,1.5
+Bronx,204,Highbridge,22.4,29.7,9.7,1.2
+Queens,411,Douglas Manor-Douglaston-Little Neck,17.6,31.4,8.2,0.8
+Brooklyn,308,Crown Heights North,21.3,30.7,8.9,0.9
+Bronx,211,Pelham Parkway,19.6,30.5,8.9,1.0
+Queens,401,Old Astoria,20.6,31.8,9.0,1.0
+Queens,411,Oakland Gardens,17.6,31.4,8.2,0.8
+Queens,410,Lindenwood-Howard Beach,18.2,33.1,7.9,0.7
+Brooklyn,305,East New York,18.7,32.9,8.7,0.9
+Manhattan,102,SoHo-TriBeCa-Civic Center-Little Italy,26.3,27.2,10.6,1.6
+Manhattan,103,Lower East Side,24.3,28.0,9.9,1.4
+Queens,407,College Point,19.0,31.9,8.5,0.9
+Brooklyn,312,Sunset Park East,19.9,32.0,8.5,0.8
+Brooklyn,303,Bedford,21.3,30.6,9.0,0.9
+Queens,409,Richmond Hill,19.5,31.8,8.3,0.8
+Staten Island,501,Westerleigh,16.9,30.4,8.2,0.7
+Bronx,210,Schuylerville-Throgs Neck-Edgewater Park,18.8,31.7,9.0,1.0
+Manhattan,108,Yorkville,25.8,28.0,10.2,1.4
+Bronx,212,Eastchester-Edenwald-Baychester,19.0,29.8,9.1,1.0
+Queens,402,Elmhurst-Maspeth,21.2,31.6,10.3,1.3
+Brooklyn,303,Stuyvesant Heights,21.3,30.6,9.0,0.9
+Bronx,207,Kingsbridge Heights,20.9,29.2,9.3,1.1
+Brooklyn,309,Prospect Lefferts Gardens-Wingate,20.8,31.2,8.7,0.8
+Bronx,211,Van Nest-Morris Park-Westchester Square,19.6,30.5,8.9,1.0
+Bronx,201,Melrose South-Mott Haven North,21.8,30.8,9.9,1.2
+Bronx,209,West Farms-Bronx River,20.1,31.2,9.0,1.0
+Brooklyn,301,North Side-South Side,21.7,31.0,10.6,1.3
+Brooklyn,305,East New York (Pennsylvania Ave),18.7,32.9,8.7,0.9
+Brooklyn,311,Bath Beach,19.1,33.4,8.0,0.7
+Brooklyn,313,Seagate-Coney Island,16.1,35.8,7.6,0.6
+Staten Island,503,Rossville-Woodrow,11.8,34.1,7.3,0.6
+Manhattan,103,East Village,24.3,28.0,9.9,1.4
+Brooklyn,305,Cypress Hills-City Line,18.7,32.9,8.7,0.9
+Brooklyn,318,Canarsie,16.6,34.7,8.1,0.7
+Brooklyn,318,Georgetown-Marine Park-Bergen Beach-Mill Basin,16.6,34.7,8.1,0.7
+Manhattan,112,Washington Heights South,20.7,28.9,9.4,1.1
+Staten Island,503,Charleston-Richmond Valley-Tottenville,11.8,34.1,7.3,0.6
+Bronx,210,Pelham Bay-Country Club-City Island,18.8,31.7,9.0,1.0
+Brooklyn,301,Williamsburg,21.7,31.0,10.6,1.3
+Queens,408,Kew Gardens Hills,18.3,31.3,8.2,0.8
+Manhattan,111,East Harlem South,22.9,29.6,9.5,1.2
+Queens,401,Woodside,20.6,31.8,9.0,1.0
+Staten Island,501,New Brighton-Silver Lake,16.9,30.4,8.2,0.7
+Queens,413,Bellerose,17.2,32.6,7.9,0.7
+Bronx,203,Crotona Park East,21.4,30.2,9.3,1.1
+Brooklyn,315,Brighton Beach,17.4,34.8,7.8,0.7
+Brooklyn,307,Sunset Park West,19.8,31.2,9.6,1.0
+Brooklyn,310,Dyker Heights,19.2,31.8,8.4,0.8
+Queens,404,Elmhurst,21.9,31.2,8.7,0.9
+Brooklyn,316,Ocean Hill,20.1,32.1,8.9,0.9
+Brooklyn,301,Bushwick South,21.7,31.0,10.6,1.3
+Brooklyn,309,Crown Heights South,20.8,31.2,8.7,0.8
+Manhattan,109,Hamilton Heights,22.9,28.8,9.4,1.1
+Queens,410,South Ozone Park,18.2,33.1,7.9,0.7
+Bronx,209,Soundview-Castle Hill-Clason Point-Harding Park,20.1,31.2,9.0,1.0
+Bronx,204,West Concourse,22.4,29.7,9.7,1.2
+Bronx,205,Bedford Park-Fordham North,22.7,29.1,9.8,1.3
+Manhattan,109,Manhattanville,22.9,28.8,9.4,1.1
+Queens,413,Rosedale,17.2,32.6,7.9,0.7
+Bronx,208,Spuyten Duyvil-Kingsbridge,17.8,28.8,9.2,1.0
+Staten Island,501,Mariner's Harbor-Arlington-Port Ivory-Graniteville,16.9,30.4,8.2,0.7
+Queens,413,Cambria Heights,17.2,32.6,7.9,0.7
+Queens,401,Queensbridge-Ravenswood-Long Island City,20.6,31.8,9.0,1.0
+Brooklyn,307,Windsor Terrace,19.8,31.2,9.6,1.0
+Bronx,212,Williamsbridge-Olinville,19.0,29.8,9.1,1.0
+Queens,407,East Flushing,19.0,31.9,8.5,0.9
+Queens,408,Pomonok-Flushing Heights-Hillcrest,18.3,31.3,8.2,0.8
+Brooklyn,302,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill,22.4,29.4,9.8,1.1
+Staten Island,501,Stapleton-Rosebank,16.9,30.4,8.2,0.7
+Bronx,211,Allerton-Pelham Gardens,19.6,30.5,8.9,1.0
+Brooklyn,317,East Flatbush-Farragut,19.8,32.4,8.7,0.8
+Brooklyn,302,Brooklyn Heights-Cobble Hill,22.4,29.4,9.8,1.1
+Queens,412,Jamaica,18.5,32.2,8.2,0.8
+Bronx,209,Parkchester,20.1,31.2,9.0,1.0
+Manhattan,112,Washington Heights North,20.7,28.9,9.4,1.1
+Queens,403,North Corona,21.0,31.5,8.3,0.9
+Bronx,203,Morrisania-Melrose,21.4,30.2,9.3,1.1
+Manhattan,110,Central Harlem North-Polo Grounds,23.3,29.1,9.3,1.2
+Queens,413,Glen Oaks-Floral Park-New Hyde Park,17.2,32.6,7.9,0.7
+Manhattan,111,East Harlem North,22.9,29.6,9.5,1.2
+Queens,412,Hollis,18.5,32.2,8.2,0.8
+Queens,405,Middle Village,19.4,32.1,8.9,0.9
+Staten Island,501,West New Brighton-New Brighton-St. George,16.9,30.4,8.2,0.7
+Bronx,201,Mott Haven-Port Morris,21.8,30.8,9.9,1.2
+Staten Island,501,Grymes Hill-Clifton-Fox Hills,16.9,30.4,8.2,0.7
+Queens,405,Maspeth,19.4,32.1,8.9,0.9
+Bronx,209,Soundview-Bruckner,20.1,31.2,9.0,1.0
+Queens,408,Briarwood-Jamaica Hills,18.3,31.3,8.2,0.8
+Manhattan,112,Marble Hill-Inwood,20.7,28.9,9.4,1.1
+Bronx,208,North Riverdale-Fieldston-Riverdale,17.8,28.8,9.2,1.0
+Bronx,204,East Concourse-Concourse Village,22.4,29.7,9.7,1.2
+Bronx,210,Westchester-Unionport,18.8,31.7,9.0,1.0
+Bronx,202,Longwood,20.9,31.8,9.8,1.2
+Queens,409,Ozone Park,19.5,31.8,8.3,0.8
+Queens,407,Ft. Totten-Bay Terrace-Clearview,19.0,31.9,8.5,0.9
+Queens,412,Springfield Gardens North,18.5,32.2,8.2,0.8
+Bronx,202,Hunts Point,20.9,31.8,9.8,1.2
+Brooklyn,305,Starrett City,18.7,32.9,8.7,0.9
+Queens,412,Baisley Park,18.5,32.2,8.2,0.8
+Brooklyn,313,West Brighton,16.1,35.8,7.6,0.6
+Staten Island,501,Port Richmond,16.9,30.4,8.2,0.7
+Bronx,211,Bronxdale,19.6,30.5,8.9,1.0
+Manhattan,105,Hudson Yards-Chelsea-Flatiron-Union Square,32.9,24.3,12.3,1.7
+Bronx,210,Co-op City,18.8,31.7,9.0,1.0
+Queens,412,South Jamaica,18.5,32.2,8.2,0.8

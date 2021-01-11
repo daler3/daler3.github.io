@@ -1,0 +1,140 @@
+<section id="health">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Tree health</h2>
+                <hr class="star-primary">
+            </div>
+            <p>
+                Having thousands and thousands of trees standing around in a harsh, urban environment like NYC, makes
+                you wonder what will happen to them and their surroundings, since they are dynamic, living organisms that
+                develop over time. Just as humans, trees can get sick and die. They can fall over, into power lines and phone
+                lines, onto roads etc. They can also be a nuisance for the people living near them if they start looking
+                old or sick. <br> Because of this, there can be value gained from knowing the health status
+                of the trees around the city. Below is a plot of the health status of the top 20 species. It is worth noting,
+                however, that the dataset is based on a community survey, the data is collected by volunteers, so the basis
+                for the trees' health is solely based on perception of the volunteers collecting the data. The plot shows
+                the top 20 trees and their health, in descending order of 'Good' trees.
+                <img style="width:900px;margin:0 auto" src="img/total_tree_nyc_health.png" class="img-responsive">
+            </p>
+            <br><br>
+			<p>
+				From the bar chart we can see that, in general, most trees are in good health, but some species have more trees in 
+				"fair" or "poor" state than others. Especially the Norway Maple species have a lot of trees in either poor or fair state.
+				Both London Planetrees, Honeylocust, Callery Pear and Pin oak also have a large share of trees in fair (or poor) state,
+				but it is also the most common species with a substantial amount of trees.
+			</p>
+            <p>
+                There's quite a lot more trees in good health than there are trees in bad health. To get the percentage of
+                good, fair and poor trees, and to further visualize the total amount of the trees' respective health status,
+                here's a pie chart:
+            </p>
+            <div id="pieChart"></div>
+            <p>
+                Click on the image below to see a map of NYC, showing the results of a KNN classification of tree health, based on their
+                GPS locations. The purpose of this visualization is an attempt to give an easily understandable overview
+                of the tree health status of the trees around the city. For more details about the classifications, please view the iPython Explainer Notebook, that can
+                be downloaded from the top of the page. As a note, we have also used other machine learning techniques for this classification, e.g. Decision
+				trees, though those have not been visualized, as the dendogram was too large to view and interpret properly. 
+            </p>
+            <br>
+            <div class="col-sm-4 modal-item" style="float:none;margin:0 auto">
+                <a href="#knnmap-modal" class="modal-link" data-toggle="modal">
+                    <img src="img/modals/nyc_map.png" class="img-responsive">
+                </a>
+            </div>
+            <p>
+                We discovered that the health status is not directly related to the problems that the trees may have. The problems are artificial, and
+                caused by humans, e.g. putting fences around the trees or lights positioned so that the branches grow into them. For more details about problems,
+                move to the next section. 
+            </p>
+        </div>
+    </div>
+    <script>
+        var pie = new d3pie("pieChart", {
+            "header": {
+                "title": {
+                    "text": "2015 health status",
+                    "fontSize": 24,
+                    "font": "open sans"
+                },
+                "subtitle": {
+                    "color": "#999999",
+                    "fontSize": 12,
+                    "font": "open sans"
+                },
+                "titleSubtitlePadding": 9
+            },
+            "footer": {
+                "color": "#999999",
+                "fontSize": 10,
+                "font": "open sans",
+                "location": "bottom-left"
+            },
+            "size": {
+                "canvasWidth": 590,
+                "pieOuterRadius": "90%"
+            },
+            "data": {
+                "sortOrder": "value-desc",
+                "content": [
+                    {
+                        "label": "Good",
+                        "value": 81.44,
+                        "color": "#24c123"
+                    },
+                    {
+                        "label": "Fair",
+                        "value": 14.68,
+                        "color": "#eae232"
+                    },
+                    {
+                        "label": "Poor",
+                        "value": 3.88,
+                        "color": "#e13d3d"
+                    }
+                ]
+            },
+            "labels": {
+                "outer": {
+                    "pieDistance": 32
+                },
+                "mainLabel": {
+                    "fontSize": 11
+                },
+                "percentage": {
+                    "color": "#ffffff",
+                    "decimalPlaces": 2
+                },
+                "value": {
+                    "color": "#adadad",
+                    "fontSize": 11
+                },
+                "lines": {
+                    "enabled": true
+                },
+                "truncation": {
+                    "enabled": true
+                }
+            },
+            "tooltips": {
+                "enabled": true,
+                "type": "placeholder",
+                "string": "{label}: {percentage}%"
+            },
+            "effects": {
+                "pullOutSegmentOnClick": {
+                    "effect": "linear",
+                    "speed": 400,
+                    "size": 8
+                }
+            },
+            "misc": {
+                "gradient": {
+                    "enabled": true,
+                    "percentage": 100
+                }
+            }
+        });
+    </script>
+</section>

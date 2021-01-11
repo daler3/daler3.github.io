@@ -1,0 +1,229 @@
+<section id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Get to know the street trees of NYC</h2>
+                <hr class="star-primary">
+            </div>
+            <p>So we know that NYC is divided into 5 different boroughs. Those are then divided into 52 different community boards, 
+			which are again divided into 188 different neighborhoods. Our modified Street Tree dataset consists of 534,514 tree observations 
+			and 21 features, totalling 74.5 MB. It contains only relevant features and data for the 20 most common species. For more details
+			about the data extraction, have a look at our <a style="color: #bc184d" href="https://nbviewer.jupyter.org/github/cecli/cecli.github.io/blob/master/explainer_notebook.ipynb?flush_cache=true">notebook</a>
+            </p>
+            <p>By now, the clever reader might have figured out, that there's also (at least) a handful of trees in NYC. Below
+                is a plot of the frequency of all the different species of trees in NYC. As you can see, there is a lot of
+                trees in NYC, in fact, they amount to 683.788.
+                <img style="width:1000px;margin:0 auto" src="img/trees15nyc_all.png" class="img-responsive"><br> Now, let's
+                focus on just the 20 most common tree species. Below you find a pie chart showing the percentage distribution
+                of the top 20 species.<br></p>
+                <div id="pieChart2"></div><br>
+                <p> Actually, there is no reason to focus on the top 20 species. The frequency is simply becoming too small. In the following
+                we focus only on a smaller subset of trees. <br><br> Click the image below to get to know your top 10 trees.
+            </p>
+            <div class="col-sm-4 modal-item" style="float:none;margin:0 auto">
+                <a href="#modal-tree2" class="modal-link" data-toggle="modal">
+                    <img src="img/modals/modal_img_fun_facts.png" class="img-responsive">
+                </a>
+            </div>
+            <br>
+            <p>
+                Now that you have had the time to check out the most frequent species, and probably gotten to know them a little better,
+                wouldn't it be a good time to take a closer look at how they are distributed across the different boroughs?
+                Click the image below to see an interactive visualization of the distribution of the top 5 trees in NYC and
+                the five boroughs.
+            </p>
+            <div class="col-sm-4 modal-item" style="float:none;margin:0 auto">
+                <a href="#modal-tree" class="modal-link" data-toggle="modal">
+                    <img src="img/modals/modal_img_hist.png" class="img-responsive">
+                </a>
+            </div>   
+            <br><br>
+			<p>
+				We have also used KNN to predict the 20 most common species based on their location. From this classification, it can be derived
+				that the same species is not necessarily planted next to each other. Details about this can also be found in the Explainer notebook.
+			</p>
+            
+			<p>
+                In the three heatmaps below we can see the total distribution of all the trees. Plotting it on a heatmap like this, makes
+                it easy to see how the amount of trees have grown a lot throughout the years in almost all areas of the city.
+            </p>
+            <img src="img/heatmaps.png" style="margin:0 auto" class="img-responsive">                     
+            <script src="d3pie.min.js"></script>           
+
+            <script>
+                var pie2 = new d3pie("pieChart2", {
+                    "header": {
+                        "title": {
+                            "text": "Top 20 tree species in NYC",
+                            "fontSize": 24,
+                            "font": "open sans"
+                        },
+                        "subtitle": {
+                            "text": "2015 data",
+                            "color": "#999999",
+                            "fontSize": 12,
+                            "font": "open sans"
+                        },
+                        "titleSubtitlePadding": 9
+                    },
+                    "footer": {
+                        "color": "#999999",
+                        "fontSize": 10,
+                        "font": "open sans",
+                        "location": "bottom-left"
+                    },
+                    "size": {
+                        "canvasWidth": 590,
+                        "pieOuterRadius": "93%"
+                    },
+                    "data": {
+                        "sortOrder": "value-desc",
+                        "content": [
+                            {
+                                "label": "London Planetree",
+                                "value": 16,
+                                "color": "#7e3838"
+                            },
+                            {
+                                "label": "Honeylocust",
+                                "value": 12,
+                                "color": "#7e5038"
+                            },
+                            {
+                                "label": "Callery Pear",
+                                "value": 11,
+                                "color": "#7e6838"
+                            },
+                            {
+                                "label": "Pin oak",
+                                "value": 10,
+                                "color": "#787e38"
+                            },
+                            {
+                                "label": "Norway maple",
+                                "value": 6,
+                                "color": "#607e38"
+                            },
+                            {
+                                "label": "Little-leaf linden",
+                                "value": 6,
+                                "color": "#4b7e38"
+                            },
+                            {
+                                "label": "Cherry",
+                                "value": 5,
+                                "color": "#387e42"
+                            },
+                            {
+                                "label": "Japanese Zelkova",
+                                "value": 5,
+                                "color": "#387e5d"
+                            },
+                            {
+                                "label": "Ginkgo",
+                                "value": 4,
+                                "color": "#387e73"
+                            },
+                            {
+                                "label": "Sophora",
+                                "value": 4,
+                                "color": "#386d7e"
+                            },
+                            {
+                                "label": "Green ash",
+                                "value": 3,
+                                "color": "#385d7e"
+                            },
+                            {
+                                "label": "American Linden",
+                                "value": 3,
+                                "color": "#384a7e"
+                            },
+                            {
+                                "label": "Red maple",
+                                "value": 3,
+                                "color": "#384a7e"
+                            },
+                            {
+                                "label": "Silver maple",
+                                "value": 2,
+                                "color": "#45387e"
+                            },
+                            {
+                                "label": "Sweetgum",
+                                "value": 2,
+                                "color": "#54387e"
+                            },
+                            {
+                                "label": "Northern red oak",
+                                "value": 2,
+                                "color": "#63387e"
+                            },
+                            {
+                                "label": "Silver linden",
+                                "value": 1,
+                                "color": "#77387e"
+                            },
+                            {
+                                "label": "American elm",
+                                "value": 1,
+                                "color": "#7e3872"
+                            },
+                            {
+                                "label": "Maple",
+                                "value": 1,
+                                "color": "#7e3860"
+                            },
+                            {
+                                "label": "Purple-leaf plum",
+                                "value": 1,
+                                "color": "#7e384a"
+                            }
+                        ]
+                    },
+                    "labels": {
+                        "outer": {
+                            "pieDistance": 32
+                        },
+                        "mainLabel": {
+                            "fontSize": 11
+                        },
+                        "percentage": {
+                            "color": "#ffffff",
+                            "decimalPlaces": 0
+                        },
+                        "value": {
+                            "color": "#adadad",
+                            "fontSize": 11
+                        },
+                        "lines": {
+                            "enabled": true
+                        },
+                        "truncation": {
+                            "enabled": true
+                        }
+                    },
+                    "tooltips": {
+                        "enabled": true,
+                        "type": "placeholder",
+                        "string": "{label}: {percentage}%"
+                    },
+                    "effects": {
+                        "pullOutSegmentOnClick": {
+                            "effect": "linear",
+                            "speed": 400,
+                            "size": 8
+                        }
+                    },
+                    "misc": {
+                        "gradient": {
+                            "enabled": true,
+                            "percentage": 100
+                        }
+                    }
+                });
+
+            </script>
+        </div>
+    </div>
+</section>
